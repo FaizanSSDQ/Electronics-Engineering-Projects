@@ -1,0 +1,26 @@
+* Qucs 24.1.0  D:/007-78-FYP/RF Circuits/Circuits/RF_LowPassFilter_prj/RC_Circuit.sch
+.INCLUDE "C:/Qucs-S/share/qucs-s/xspice_cmlib/include/ngspice_mathfunc.inc"
+R1 _net0 _net1  1K tc1=0.0 tc2=0.0 
+RC1 0 _net1  1P tc1=0.0 tc2=0.0 
+V1 _net0 0 DC 0 SIN(0 1 1MEG 0 0 0) AC 1 ACPHASE 0
+
+.control
+
+tran 2e-07 1e-05 0 
+let CL = 1 pF
+let RS = 1 kOhm
+write spice4qucs.tr1.plot CL RS
+destroy all
+reset
+
+ac dec 51 1k 10g 
+let CL = 1 pF
+let RS = 1 kOhm
+let TF = 20*log10(abs(V(out)/V(in)))
+write spice4qucs.ac1.plot CL RS TF
+destroy all
+reset
+
+exit
+.endc
+.END

@@ -1,0 +1,87 @@
+<Qucs Schematic 0.0.22>
+<Properties>
+  <View=150,-90,2490,750,0.67735,0,0>
+  <Grid=10,10,0>
+  <DataSet=WTCT_System.dat>
+  <DataDisplay=WTCT_System.sch>
+  <OpenDisplay=1>
+  <Script=WTCT_System.m>
+  <RunScript=0>
+  <showFrame=0>
+  <FrameText0=Title>
+  <FrameText1=Drawn By:>
+  <FrameText2=Date:>
+  <FrameText3=Revision:>
+</Properties>
+<Symbol>
+</Symbol>
+<Components>
+</Components>
+<Wires>
+</Wires>
+<Diagrams>
+  <Rect 590 210 240 160 3 #c0c0c0 1 00 1 0 0.2 1 1 -0.1 0.5 1.1 1 -0.1 0.5 1.1 315 0 225 "" "" "">
+	<"ngspice/tran.v(tx_bb)" #ff0000 0 3 0 0 0>
+  </Rect>
+  <Rect 900 210 240 160 3 #c0c0c0 1 00 1 -1 0.5 1 1 -1 1 1 1 -1 1 1 315 0 225 "" "" "">
+	<"ngspice/tran.v(tx_lo)" #ff00ff 0 3 0 0 0>
+  </Rect>
+  <Rect 1220 210 240 160 3 #c0c0c0 1 00 1 0 2e-05 0.0001 1 2.2 0.2 2.8 1 -1 1 1 315 0 225 "" "" "">
+	<"ngspice/tran.v(tx_mix)" #ffaa00 0 3 0 0 0>
+  </Rect>
+  <Rect 270 210 240 160 3 #c0c0c0 1 00 1 0 1e-05 5e-05 1 -1.2 1 1.19998 1 -1 1 1 315 0 225 "" "" "">
+	<"ngspice/tran.v(tx_in)" #0000ff 0 3 0 0 0>
+  </Rect>
+  <Rect 1530 210 240 160 3 #c0c0c0 1 00 1 0 2e-05 0.0001 1 0 2 4.73209 1 -1 1 1 315 0 225 "" "" "">
+	<"ngspice/tran.v(tx_bpf)" #005500 0 3 0 0 0>
+  </Rect>
+  <Rect 1840 210 240 160 3 #c0c0c0 1 00 1 0 2e-05 0.0001 1 0 2 4.73209 1 -1 1 1 315 0 225 "" "" "">
+	<"ngspice/tran.v(tx_out)" #aa0000 0 3 0 0 0>
+  </Rect>
+  <Rect 2170 210 240 160 3 #c0c0c0 1 00 1 0 500000 2e+06 1 -97.2679 500 1069.95 1 -1 1 1 315 0 225 "" "" "">
+	<"ngspice/norm(mag(v(tx_out)))" #5500ff 0 3 0 0 0>
+	  <Mkr 1e+06 -70 83 3 0 0>
+  </Rect>
+  <Rect 590 650 240 160 3 #c0c0c0 1 00 1 0 2e-05 0.0001 1 2.26002 0.2 2.73998 1 -1 1 1 315 0 225 "" "" "">
+	<"ngspice/tran.v(rx_bpf)" #ff0000 0 3 0 0 0>
+  </Rect>
+  <Rect 900 650 240 160 3 #c0c0c0 1 00 1 0 2e-05 0.0001 1 -0.5 2 6 1 -1 1 1 315 0 225 "" "" "">
+	<"ngspice/tran.v(rx_lna)" #ff00ff 0 3 0 0 0>
+  </Rect>
+  <Rect 1220 650 240 160 3 #c0c0c0 1 00 1 0 2e-05 0.0001 1 2.2 0.2 2.8 1 -1 1 1 315 0 225 "" "" "">
+	<"ngspice/tran.v(rx_mix)" #ffaa00 0 3 0 0 0>
+  </Rect>
+  <Rect 270 650 240 160 3 #c0c0c0 1 00 1 0 2e-05 0.0001 1 0.00313683 0.002 0.008689 1 -1 1 1 315 0 225 "" "" "">
+	<"ngspice/tran.v(rx_in)" #0000ff 0 3 0 0 0>
+  </Rect>
+  <Rect 1530 650 240 160 3 #c0c0c0 1 00 1 -1 0.5 1 1 -1 1 1 1 -1 1 1 315 0 225 "" "" "">
+	<"ngspice/tran.v(rx_lpf)" #005500 0 3 0 0 0>
+  </Rect>
+  <Rect 1840 650 240 160 3 #c0c0c0 1 00 1 0 2e-05 0.0001 1 0 2 4.73209 1 -1 1 1 315 0 225 "" "" "">
+	<"ngspice/tran.v(rx_out)" #aa0000 0 3 0 0 0>
+  </Rect>
+  <Rect 2170 650 240 160 3 #c0c0c0 1 00 1 0 500000 2e+06 1 -97.2679 500 1069.95 1 -1 1 1 315 0 225 "" "" "">
+	<"ngspice/norm(mag(v(rx_out)))" #5500ff 0 3 0 0 0>
+	  <Mkr 20000 -70 -287 3 0 0>
+  </Rect>
+</Diagrams>
+<Paintings>
+  <Text 680 10 12 #000000 0 "TX - BB">
+  <Text 980 10 12 #000000 0 "TX - LO">
+  <Text 1300 10 12 #000000 0 "TX - MIX">
+  <Text 360 10 12 #000000 0 "TX - IN">
+  <Rectangle 190 -10 2260 280 #000000 0 1 #c0c0c0 1 0>
+  <Text 1620 10 12 #000000 0 "TX - BPF">
+  <Text 1930 10 12 #000000 0 "TX - OUT">
+  <Text 2240 10 12 #000000 0 "FFT - TX - OUT">
+  <Text 680 450 12 #000000 0 "RX - BPF">
+  <Text 980 450 12 #000000 0 "RX - LNA">
+  <Text 1300 450 12 #000000 0 "RX - MIX">
+  <Text 360 450 12 #000000 0 "RX - IN">
+  <Rectangle 190 430 2260 280 #000000 0 1 #c0c0c0 1 0>
+  <Text 1620 450 12 #000000 0 "RX - LPF">
+  <Text 1930 450 12 #000000 0 "RX - OUT">
+  <Text 2240 450 12 #000000 0 "FFT - RX - OUT">
+  <Text 1280 390 20 #000000 0 "Receiver">
+  <Text 1280 -50 20 #000000 0 "Transmitter">
+</Paintings>
